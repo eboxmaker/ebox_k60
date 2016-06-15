@@ -2,6 +2,8 @@
 #define __EBOX_COMMON_H
 
 #include "MK60D10.h"                    // Device header
+#include "../ebox/ebox_port.h"
+
 
 #define EBOX_VERSION "16.6.14"
 
@@ -41,4 +43,8 @@
 #else
 #define     __RAMFUN
 #endif
+    
+    
+
+
 #endif

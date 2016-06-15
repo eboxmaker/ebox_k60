@@ -6,7 +6,7 @@ extern "C" {
     
 #include "ebox_core.h"
 
-#define _CPU_XTAL_CLK_HZ        (50*1000000UL)           /* Value of the external crystal or oscillator clock frequency of the system oscillator (OSC) in Hz */
+#define _CPU_XTAL_CLK_HZ        (50*1000000UL)      /* Value of the external crystal or oscillator clock frequency of the system oscillator (OSC) in Hz */
 #define _CPU_XTAL32k_CLK_HZ     32768U              /* Value of the external 32k crystal or oscillator clock frequency of the RTC in Hz */
 #define _CPU_INT_SLOW_CLK_HZ    32768U              /* Value of the slow internal oscillator clock frequency in Hz */
 #define _CPU_INT_FAST_CLK_HZ    4000000U            /* Value of the fast internal oscillator clock frequency in Hz */
@@ -16,7 +16,7 @@ extern "C" {
     
 #define MAX_CORE_CLOCK          MAX_PLL_CLOCK
 #define MAX_BUS_CLOCK           (50*1000000UL)
-#define MAX_FLEX_CLOCK          (50*1000000UL)
+#define MAX_FLEX_CLOCK          (100*1000000UL)
 #define MAX_FLASH_CLOCK         (25*1000000UL)
         
     static uint8_t system_clock_init(void);
@@ -76,7 +76,7 @@ void fb_clk_init(void)
             if((2*1000000 <= _CPU_XTAL_CLK_HZ / (i + 1)) && (_CPU_XTAL_CLK_HZ / (i + 1) <= 4*1000000))//满足2M~4M条件
             {
               config->pll.clock = _CPU_XTAL_CLK_HZ * (j + 24) / (i + 1)  ;
-              if(config->pll.clock == MAX_PLL_CLOCK)//达到最高PLL限定值，
+              if(config->pll.clock == MAX_PLL_CLOCK)//达到最高PLL限定值，优先分配相等的配置
               {
                 config->pll.prdiv = i ;
                 config->pll.vdiv = j;
@@ -102,15 +102,14 @@ void fb_clk_init(void)
         {          
           config->pll.clock = _CPU_XTAL_CLK_HZ * (config->pll.vdiv + 24) / (config->pll.prdiv + 1) ;
         }
-        else//分配失败
+        else//分配失败，加载默认配置
         {
           config->pll.prdiv = 24;
           config->pll.vdiv  = 26;
           config->pll.clock = _CPU_XTAL_CLK_HZ * (config->pll.vdiv + 24) / (config->pll.prdiv + 1) ;
         }
         
-       
-
+    
         
         for(int i = 1; i < 16 ; i++)
         {
@@ -147,9 +146,7 @@ void fb_clk_init(void)
                 config->sim.flash_div = i-1;
                 break;
             }
-        }        
-   
-        
+        }               
         config->clock.core = config->pll.clock/(config->sim.core_div + 1);
         config->clock.bus  = config->pll.clock/(config->sim.bus_div + 1);
         config->clock.flex = config->pll.clock/(config->sim.flex_div + 1);
@@ -229,6 +226,8 @@ void fb_clk_init(void)
         return 0;
     } //pll_init     
   
+
+
     void ebox_init(void)
     {
         system_clock_init();
@@ -251,12 +250,12 @@ void fb_clk_init(void)
     void delay_ms(uint64_t ms)
     {
         uint64_t end ;
-        end = micros() + ms * 1000 - 3;//3us的叠加
+        end = micros() + ms * 1000 ;//3us的叠加
         while(micros() < end);
     }
     void delay_us(uint64_t us)
     {
-        uint64_t end = micros() + us - 3;//3us的叠加
+        uint64_t end = micros() + us ;//3us的叠加
         while(micros() < end);
     }
 
@@ -286,19 +285,6 @@ void fb_clk_init(void)
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

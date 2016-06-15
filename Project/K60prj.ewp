@@ -1912,7 +1912,16 @@
       <name>$PROJ_DIR$\..\ebox\ebox_gpio.cpp</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_object.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_port.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_sim.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_uart.cpp</name>
     </file>
     <configuration>
       <name>Debug</name>

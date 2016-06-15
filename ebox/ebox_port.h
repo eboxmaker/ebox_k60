@@ -1,16 +1,21 @@
 #ifndef __EBOX_PORT_H
 #define __EBOX_PORT_H
-#include "MK60D10.h"
+#include "../ebox/ebox_common.h"
 
 /*! @brief Pin mux selection*/
-#define PORT_PIN_DISABLED   0U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
-#define PORT_MUX_AS_GPIO    1U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
-#define    kPortMuxAlt2     2U   /*!< chip-specific*/
-#define    kPortMuxAlt3     3U   /*!< chip-specific*/
-#define    kPortMuxAlt4     4U   /*!< chip-specific*/
-#define    kPortMuxAlt5     5U   /*!< chip-specific*/
-#define    kPortMuxAlt6     6U   /*!< chip-specific*/
-#define    kPortMuxAlt7     7U    /*!< chip-specific*/
+#define     PORT_PIN_DISABLED   0U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
+#define     PORT_MUX_AS_GPIO    1U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
+#define     PORT_MUX_ALT2     2U   /*!< chip-specific*/
+#define     PORT_MUX_ALT3     3U   /*!< chip-specific*/
+#define     PORT_MUX_ALT4     4U   /*!< chip-specific*/
+#define     PORT_MUX_ALT5     5U   /*!< chip-specific*/
+#define     PORT_MUX_ALT6     6U   /*!< chip-specific*/
+#define     PORT_MUX_ALT7     7U    /*!< chip-specific*/
+
+
+
+
+
 class Port
 {
 public:
