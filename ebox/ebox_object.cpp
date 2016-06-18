@@ -124,6 +124,9 @@ Gpio PD25(GPIOD, PORTD,25);
 Gpio PE0(GPIOE, PORTE,0);
 Gpio PE1(GPIOE, PORTE,1);
 
+Gpio PE25(GPIOE, PORTE,25);
+Gpio PE26(GPIOE, PORTE,26);
+
 Uart uart0(UART0,&PA2,&PA0);
 //Uart uart0(UART0,&PC4,&PC5);
 //Uart uart0(UART0,&PC4,&PC5);

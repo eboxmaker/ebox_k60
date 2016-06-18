@@ -3,11 +3,10 @@
 
 #include "../ebox/ebox_common.h"
 #include "../ebox/ebox_core.h"
-#include "../ebox/ebox_gpio.h"
-#include "../ebox/ebox_port.h"
 #include "../ebox/ebox_core.h"
 #include "../ebox/ebox_sim.h"
 #include "../ebox/ebox_uart.h"
+#include "../ebox/ebox_exti.h"
 
 
 extern Gpio PA0;
@@ -117,5 +116,7 @@ extern Gpio PD20;
 
 extern Gpio PE0;
 extern Gpio PE1;
+extern Gpio PE25;
+extern Gpio PE26;
 
 #endif

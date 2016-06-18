@@ -1,7 +1,6 @@
 
 #include "../ebox/ebox_uart.h"
 #include "../ebox/ebox.h"
-
 Uart::Uart(UART_Type *uart,Port *tx,Port *rx)
 {
 this->uart = uart;
@@ -14,8 +13,8 @@ void Uart::begin(uint32_t baud_rate)
 }
 void Uart::port_init(void)
 {
-    tx->set_clock_cmd(1);
-    rx->set_clock_cmd(1);
+    tx->set_clock_enable(ENABLE);
+    rx->set_clock_enable(ENABLE);
     switch((uint32_t)uart)
     {
     case (uint32_t)UART0:

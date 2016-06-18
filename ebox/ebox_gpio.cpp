@@ -1,7 +1,107 @@
-#include "../ebox/ebox_gpio.h"
 #include "../ebox/ebox_common.h"
-#include "MK60D10_extension.h"
 
+/*
+    OUTPUT_PP    = 0x0,    
+    OUTPUT_PP_PU    ,    
+    OUTPUT_PP_PD    ,
+    
+    OUTPUT_OD       ,
+    OUTPUT_OD_PU    ,
+    OUTPUT_OD_PD    ,
+    
+    AIN             ,
+    
+    INPUT           ,
+    INPUT_PD        ,
+    INPUT_PU        ,
+    
+    AF_OD           ,
+    AF_OD_PU        ,   
+    AF_OD_PD        ,
+    
+    AF_PP           ,      
+    AF_PP_PU        ,
+    AF_PP_PD        ,
+    */
+void Gpio::mode(PIN_MODE mode)
+{
+    set_clock_enable(ENABLE);
+    switch(mode)
+    {
+    	case OUTPUT_PP:
+    		set_dir_out();
+    		set_push_pull_enable(ENABLE);
+    		set_open_drain_enable(DISABLE);
+    		set_pull_enable(DISABLE);
+    		set_mux(PORT_MUX_AS_GPIO);
+    		break;
+    	case OUTPUT_PP_PU:
+    		set_dir_out();
+    		set_push_pull_enable(ENABLE);
+            set_open_drain_enable(DISABLE);
+    		set_pull_enable(DISABLE);
+    		set_pull_up();
+    		set_mux(PORT_MUX_AS_GPIO);		
+    		break;
+    	case OUTPUT_PP_PD:
+    		set_dir_out();
+    		set_push_pull_enable(ENABLE);
+    		set_open_drain_enable(DISABLE);
+    		set_pull_enable(ENABLE);
+    		set_pull_down();
+    		set_mux(PORT_MUX_AS_GPIO);		
+    		break;
+        case OUTPUT_OD:
+    		set_dir_out();
+    		set_push_pull_enable(DISABLE);
+    		set_open_drain_enable(ENABLE);
+    		set_pull_enable(DISABLE);
+    		set_pull_down();
+    		set_mux(PORT_MUX_AS_GPIO);		        
+            break;
+        case OUTPUT_OD_PU:
+            set_dir_out();
+            set_push_pull_enable(DISABLE);
+            set_open_drain_enable(ENABLE);
+            set_pull_enable(DISABLE);
+            set_pull_up();
+            set_mux(PORT_MUX_AS_GPIO);              
+            break;
+        case OUTPUT_OD_PD:
+            set_dir_out();
+            set_push_pull_enable(DISABLE);
+            set_open_drain_enable(ENABLE);
+            set_pull_enable(DISABLE);
+            set_pull_down();
+            set_mux(PORT_MUX_AS_GPIO);              
+            break;
+        case INPUT:
+            set_dir_in();
+            set_push_pull_enable(DISABLE);
+            set_open_drain_enable(DISABLE);
+            set_pull_enable(DISABLE);
+            set_mux(PORT_MUX_AS_GPIO);              
+            break;
+        case INPUT_PU:
+            set_dir_in();
+            set_push_pull_enable(DISABLE);
+            set_open_drain_enable(DISABLE);
+            set_pull_enable(ENABLE);
+            set_pull_up();
+            set_mux(PORT_MUX_AS_GPIO);              
+            break;
+        case INPUT_PD:
+            set_dir_in();
+            set_push_pull_enable(DISABLE);
+            set_open_drain_enable(DISABLE);
+            set_pull_enable(ENABLE);
+            set_pull_down();
+            set_mux(PORT_MUX_AS_GPIO);              
+            break;                        
+    }
+
+
+}
 void Gpio::set_dir_in()
 {
     GPIO_CLR_PDDR(gpio_base, 1U << pin);

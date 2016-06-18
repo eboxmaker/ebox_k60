@@ -188,7 +188,13 @@
       <name>$PROJ_DIR$\..\ebox\ebox_core.cpp</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_exti.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_gpio.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_it.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\ebox\ebox_object.cpp</name>
