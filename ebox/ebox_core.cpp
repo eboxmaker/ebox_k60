@@ -69,9 +69,9 @@ void fb_clk_init(void)
         
  
         int flag = 0;
-        for(int i = 25; i >= 0; i--)//config->pll.prdiv最大值为25
+        for(int i = 25; i >= 0; i--)//config->pll.prdiv最大值为25，寻找一个合适的值满足PLL输入信号为2M~4M
         {
-          for(int j = 0; j <= 31; j++)//config->pll.vdiv最大值55
+          for(int j = 0; j <= 31; j++)//config->pll.vdiv最大值55,实际限制在31
           {
             if((2*1000000 <= _CPU_XTAL_CLK_HZ / (i + 1)) && (_CPU_XTAL_CLK_HZ / (i + 1) <= 4*1000000))//满足2M~4M条件
             {
@@ -151,6 +151,7 @@ void fb_clk_init(void)
         config->clock.bus  = config->pll.clock/(config->sim.bus_div + 1);
         config->clock.flex = config->pll.clock/(config->sim.flex_div + 1);
         config->clock.flash= config->pll.clock/(config->sim.flash_div + 1);
+        
     }
     
     

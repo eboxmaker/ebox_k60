@@ -9,6 +9,12 @@
 #include "../ebox/ebox_exti.h"
 
 
+extern Uart uart0;
+extern Uart uart1;
+extern Uart uart2;
+extern Uart uart3;
+
+
 extern Gpio PA0;
 extern Gpio PA1;
 extern Gpio PA2;

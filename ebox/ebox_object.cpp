@@ -127,10 +127,31 @@ Gpio PE1(GPIOE, PORTE,1);
 Gpio PE25(GPIOE, PORTE,25);
 Gpio PE26(GPIOE, PORTE,26);
 
-Uart uart0(UART0,&PA2,&PA0);
+/*
+UART0 :TX----PA2 | PA14 | PB17 | PD7;
+      :RX----PA1 | PA15 | PB16 | PD6;
+
+UART1 :TX----PC4 | PE0;
+      :RX----PC3 | PE1
+
+UART2 :TX----PD3 ;
+      :RX----PD2;
+
+UART3 :TX----PB11 | PC17 | TE4;
+      :RX----PB10 | PC16 | PE5
+
+UART4 :TX----PTC15 | PTE24
+      :RX----PTC14 | PTE25
+
+UART5 :TX----PTD9 | PTE8;
+      :RX----PTD8 | PTE9;
+*/
+Uart uart0(UART0,&PD7,&PD6);
 //Uart uart0(UART0,&PC4,&PC5);
 //Uart uart0(UART0,&PC4,&PC5);
 
-Uart uart1(UART1,&PE0,&PE1);
+//Uart uart1(UART1,&PE0,&PE1);
 //Uart uart1(UART1,&PC4,&PC5);
-
+Uart uart1(UART1,&PC4,&PC3);
+Uart uart2(UART2,&PD3,&PD2);
+Uart uart3(UART3,&PB11,&PB10);

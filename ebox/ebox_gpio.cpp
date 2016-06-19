@@ -97,7 +97,31 @@ void Gpio::mode(PIN_MODE mode)
             set_pull_enable(ENABLE);
             set_pull_down();
             set_mux(PORT_MUX_AS_GPIO);              
-            break;                        
+            break;
+            
+    case AF_OD:       
+        set_open_drain_enable(ENABLE);
+        break;
+    case AF_OD_PU:       
+        set_open_drain_enable(ENABLE);
+        set_pull_up();
+        break;
+    case AF_OD_PD:       
+        set_open_drain_enable(ENABLE);
+        set_pull_down();
+        break;
+
+    case AF_PP:       
+        set_open_drain_enable(ENABLE);
+        break;
+    case AF_PP_PU:       
+        set_open_drain_enable(ENABLE);
+        set_pull_up();
+        break;
+    case AF_PP_PD:       
+        set_open_drain_enable(ENABLE);
+        set_pull_up();
+        break;
     }
 
 

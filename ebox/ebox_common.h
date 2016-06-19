@@ -4,6 +4,7 @@
 #include "MK60D10.h"                    // Device header
 #include "MK60D10_extension.h"
 #include "../ebox/ebox_core.h"
+#include "../ebox/ebox_sim.h"
 
 
 
