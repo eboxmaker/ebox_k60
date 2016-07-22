@@ -44,10 +44,6 @@ void Port::set_pull_up()
 {
     PORT_BWR_PCR_PS(port, pin, 1);
 }
-
-
-
-
 void Port::set_slew_rate_fast()
 {
     PORT_BWR_PCR_SRE(port, pin, 0);
@@ -72,12 +68,25 @@ void Port::set_pull_enable(FunctionalState state)
 }
 void Port::set_clock_enable(FunctionalState state)
 {
-    uint32_t temp = (uint32_t)port;
-        temp = ((temp<<16)>>28);
-    if(state)
-        SIM->SCGC5    |= 1U << temp;
-    else
-        SIM->SCGC5    &= ~(1U << temp);
+    
+    switch((uint32_t)port)
+    {
+    case PORTA_BASE:
+        sim_set_enable_porta_clock(state);
+        break;
+    case PORTB_BASE:
+        sim_set_enable_portb_clock(state);
+        break;
+    case PORTC_BASE:
+        sim_set_enable_portc_clock(state);
+        break;
+    case PORTD_BASE:
+        sim_set_enable_portd_clock(state);
+        break;
+    case PORTE_BASE:
+        sim_set_enable_porte_clock(state);
+        break;
+    }
         
 }
 void Port::set_passive_filter_enable(FunctionalState state)
@@ -86,10 +95,12 @@ void Port::set_passive_filter_enable(FunctionalState state)
 }
 void Port::set_push_pull_enable(FunctionalState state)
 {
+    PORT_BWR_PCR_ODE(port, pin, !state);
     PORT_BWR_PCR_PE(port, pin, state);
 }
 void Port::set_open_drain_enable(FunctionalState state)
 {
+    PORT_BWR_PCR_PE(port, pin, !state);
     PORT_BWR_PCR_ODE(port, pin, state);
 }
 

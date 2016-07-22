@@ -7,7 +7,19 @@
 #include "../ebox/ebox_sim.h"
 #include "../ebox/ebox_uart.h"
 #include "../ebox/ebox_exti.h"
+#include "../ebox/ebox_adc.h"
+#include "../ebox/ebox_dac.h"
 
+extern Uart uart0;
+extern Uart uart1;
+extern Uart uart2;
+extern Uart uart3;
+
+extern Adc adc0;
+extern Adc adc1;
+
+extern Dac dac0;
+extern Dac dac1;
 
 extern Gpio PA0;
 extern Gpio PA1;

@@ -1906,13 +1906,31 @@
   <group>
     <name>ebox</name>
     <file>
+      <name>$PROJ_DIR$\..\ebox\assert.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_adc.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_core.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_dac.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\ebox\ebox_exti.cpp</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_ftm.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_gpio.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_i2c.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_iflash.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\ebox\ebox_it.cpp</name>
@@ -1921,10 +1939,19 @@
       <name>$PROJ_DIR$\..\ebox\ebox_object.cpp</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_pit.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_port.cpp</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_rtc.cpp</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\ebox\ebox_sim.cpp</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_spi.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\ebox\ebox_uart.cpp</name>

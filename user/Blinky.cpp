@@ -28,11 +28,11 @@ void setup()
 {
     ebox_init();
     
-    sim_enable_porta_clock();
-    sim_enable_portb_clock();
+    //sim_enable_porta_clock();
+    //sim_enable_portb_clock();
 
-    PA6.set_clock_enable(ENABLE);
-    PC3.set_clock_enable(ENABLE);
+    //PA6.set_clock_enable(ENABLE);
+    //PC3.set_clock_enable(ENABLE);
    // pa6.set_mux();
     
     

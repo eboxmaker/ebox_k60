@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3042371070</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\Libraries\devices\fsl_device_registers.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\include\fsl_bitaccess.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\startup\system_MK60D10.c</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\startup.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_MK60D10.o</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_i2c.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_port.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_it.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_object.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_sim.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_uart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\Blinky.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_exti.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_core.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup.o</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_exti.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup.pbi</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\startup\iar\startup_MK60D10.s</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MK60D10.pbi</file>
+      <file>$PROJ_DIR$\..\Libraries\CMSIS\Include\core_cmSimd.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\include\MK60D10_features.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\startup\system_MK60D10.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_core.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_gpio.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_it.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_object.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_port.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_sim.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_uart.cpp</file>
+      <file>$PROJ_DIR$\..\user\Blinky.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_ftm.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MK60D10.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_rtc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_core.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_exti.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_gpio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_it.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_object.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_port.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_sim.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_uart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Blinky.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\K60prj.out</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_iflash.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\K60prj.pbd</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_dac.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_rtc.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_pit.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\include\MK60D10_extension.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\..\Libraries\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\Libraries\CMSIS\Include\core_cm4.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\MK60D10\include\MK60D10.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_iflash.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\Libraries\CMSIS\Include\core_cmInstr.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_ftm.h</file>
+      <file>$PROJ_DIR$\..\Libraries\devices\startup.h</file>
+      <file>$PROJ_DIR$\..\ebox\assert.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_i2c.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\..\ebox\assert.c</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_adc.cpp</file>
+      <file>$PROJ_DIR$\..\ebox\ebox.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_core.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_sim.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_ftm.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_adc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_dac.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\assert.o</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_common.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_spi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_rtc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_pit.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_iflash.o</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_spi.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_iflash.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_i2c.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_ftm.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_dac.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\assert.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_adc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_pit.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\ebox_spi.o</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_uart.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_exti.h</file>
+      <file>$PROJ_DIR$\..\ebox\common.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_rtc.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_spi.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_pit.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_adc.h</file>
+      <file>$PROJ_DIR$\..\ebox\ebox_dac.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\Libraries\devices\MK60D10\startup\system_MK60D10.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 63 55 36 65 70 1 58 25 0 59 57 64 53 3 56 22 24 54 2 62 60 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53 65 55 59 3 2 54 57 56 36 0 58 25 70 1 23 24 63 22 64 62 60</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Libraries\devices\startup.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67 0 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53 57 58 54 59 3 2 1 56 55 36 0 23 24 25 70 22 63 67 65 64 62 60</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_i2c.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 69</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58 68 54 64 63 97 3 81 75 55 53 59 2 36 69 74 57 24 65 25 70 1 56 22 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 47</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_exti.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 96 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55 2 53 59 36 74 81 58 64 63 54 75 57 24 65 25 70 1 56 22 3 62 60 0 23 96</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Libraries\devices\MK60D10\startup\iar\startup_MK60D10.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_core.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 16</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74 25 56 65 62 70 3 55 63 0 59 57 24 36 1 22 53 60 54 75 58 64 2 23 81</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_gpio.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 54 58 59 64 63 74 55 53 2 36 81 75 57 24 65 25 70 1 56 22 3 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_it.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_object.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 73 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 95 96 101 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 36 55 63 74 59 57 101 24 1 53 81 95 65 25 70 56 3 75 96 102 54 58 64 2 73 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_port.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59 64 63 58 54 74 55 53 2 36 81 75 57 24 65 25 70 1 56 22 3 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_sim.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63 57 36 22 60 23 0 75 24 1 53 54 65 25 70 56 3 55 62 81 59 74 58 64 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_uart.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 95 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 70 3 63 23 55 74 65 25 56 62 59 57 24 36 1 22 53 60 0 81 54 75 58 64 2 95</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\Blinky.cpp</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 73 81 54 2 62 60 74 75 0 23 95 96 101 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_ftm.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 66</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81 55 59 3 53 2 75 63 58 68 54 64 97 66 74 57 24 36 65 25 70 1 56 22 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_iflash.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 85</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59 64 63 58 81 54 74 55 53 2 36 61 68 3 75 57 24 65 25 70 1 56 22 62 60 0 23 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_dac.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 102</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68 58 54 64 63 102 3 81 75 55 53 59 2 36 0 97 74 57 24 65 25 70 1 56 22 62 60 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_rtc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 98</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 75 68 24 36 1 53 0 57 63 22 60 3 54 65 25 70 56 55 62 23 98 81 59 74 58 64 2 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_pit.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 100</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81 58 54 59 64 63 74 55 53 2 36 100 68 3 75 57 24 65 25 70 1 56 22 62 60 0 23 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\assert.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55 70 3 63 23 54 65 25 56 62 75 57 24 36 1 22 53 60 0 59 74 58 64 2 81</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_adc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 78</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 101</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59 64 63 58 81 101 74 55 53 2 36 97 68 3 54 75 57 24 65 25 70 1 56 22 62 60 0 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\ebox\ebox_spi.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 97 68 81 59 63 55 36 65 70 1 58 25 57 64 53 3 56 22 24 54 2 62 60 74 75 0 23 99</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 2 55 53 59 36 74 99 81 58 64 63 0 97 68 3 54 75 57 24 65 25 70 1 56 22 62 60 23</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
