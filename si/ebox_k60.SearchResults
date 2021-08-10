@@ -1,0 +1,184 @@
+---- A Matches (320 in 9 files) ----
+Ebox.h (ebox):extern Gpio PA0;
+Ebox.h (ebox):extern Gpio PA1;
+Ebox.h (ebox):extern Gpio PA2;
+Ebox.h (ebox):extern Gpio PA3;
+Ebox.h (ebox):extern Gpio PA4;
+Ebox.h (ebox):extern Gpio PA5;
+Ebox.h (ebox):extern Gpio PA6;
+Ebox.h (ebox):extern Gpio PA7;
+Ebox.h (ebox):extern Gpio PA8;
+Ebox.h (ebox):extern Gpio PA9;
+Ebox.h (ebox):extern Gpio PA10;
+Ebox.h (ebox):extern Gpio PA11;
+Ebox.h (ebox):extern Gpio PA12;
+Ebox.h (ebox):extern Gpio PA13;
+Ebox.h (ebox):extern Gpio PA14;
+Ebox.h (ebox):extern Gpio PA15;
+Ebox.h (ebox):extern Gpio PA16;
+Ebox.h (ebox):extern Gpio PA17;
+Ebox.h (ebox):extern Gpio PA18;
+Ebox.h (ebox):extern Gpio PA19;
+Ebox.h (ebox):extern Gpio PA20;
+Ebox.h (ebox):extern Gpio PA21;
+Ebox.h (ebox):extern Gpio PA22;
+Ebox.h (ebox):extern Gpio PA23;
+Ebox.h (ebox):extern Gpio PA24;
+Ebox.h (ebox):extern Gpio PA25;
+Ebox.h (ebox):extern Gpio PA26;
+Ebox.h (ebox):extern Gpio PA27;
+Ebox.h (ebox):extern Gpio PA28;
+Ebox.h (ebox):extern Gpio PA29;
+Ebox.h (ebox):extern Gpio PA30;
+Ebox.h (ebox):extern Gpio PA31;
+Ebox_common.h (ebox):#define EWAIT       1
+Ebox_common.h (ebox):#define EPARA       4
+Ebox_common.h (ebox): * 定义运行到RAM的函数
+Ebox_common.h (ebox):#if defined(__ICCARM__)
+Ebox_common.h (ebox)://IAR 用 __ramfunc 来声明
+Ebox_common.h (ebox):#define     __RAMFUNC __ramfunc
+Ebox_common.h (ebox):#define     __RAMFUN
+Ebox_core.cpp (ebox):#define _CPU_XTAL_CLK_HZ        (50*1000000UL)      /* Value of the external crystal or oscillator clock frequency of the system oscillator (OSC) in Hz */
+Ebox_core.cpp (ebox):#define _CPU_XTAL32k_CLK_HZ     32768U              /* Value of the external 32k crystal or oscillator clock frequency of the RTC in Hz */
+Ebox_core.cpp (ebox):#define _CPU_INT_FAST_CLK_HZ    4000000U            /* Value of the fast internal oscillator clock frequency in Hz */
+Ebox_core.cpp (ebox):#define MAX_PLL_CLOCK           (200*1000000UL)
+Ebox_core.cpp (ebox):#define MAX_CORE_CLOCK          MAX_PLL_CLOCK
+Ebox_core.cpp (ebox):#define MAX_BUS_CLOCK           (50*1000000UL)
+Ebox_core.cpp (ebox):#define MAX_FLEX_CLOCK          (100*1000000UL)
+Ebox_core.cpp (ebox):#define MAX_FLASH_CLOCK         (25*1000000UL)
+Ebox_core.cpp (ebox):      SIM_SOPT2 |= SIM_SOPT2_TRACECLKSEL_MASK;
+Ebox_core.cpp (ebox):      /* Enable the TRACE_CLKOUT pin function on PTA6 (alt7 function) */
+Ebox_core.cpp (ebox):      PORTA_PCR6 = ( PORT_PCR_MUX(0x7));
+Ebox_core.cpp (ebox):    SIM_SCGC7 |= SIM_SCGC7_FLEXBUS_MASK;
+Ebox_core.cpp (ebox):        if(config->clock.core > MAX_CORE_CLOCK || config->clock.core == 0)
+Ebox_core.cpp (ebox):            config->clock.core = MAX_CORE_CLOCK;
+Ebox_core.cpp (ebox):        if(config->clock.bus > MAX_BUS_CLOCK || config->clock.bus == 0)
+Ebox_core.cpp (ebox):            config->clock.bus = MAX_BUS_CLOCK;
+Ebox_core.cpp (ebox):        if(config->clock.flex > MAX_FLEX_CLOCK || config->clock.flex == 0)
+Ebox_core.cpp (ebox):            config->clock.flex = MAX_FLEX_CLOCK;
+Ebox_core.cpp (ebox):        if(config->clock.flash > MAX_FLASH_CLOCK || config->clock.flash == 0)
+Ebox_core.cpp (ebox):            config->clock.flash = MAX_FLASH_CLOCK;
+Ebox_core.cpp (ebox):            if((2*1000000 <= _CPU_XTAL_CLK_HZ / (i + 1)) && (_CPU_XTAL_CLK_HZ / (i + 1) <= 4*1000000))//满足2M~4M条件
+Ebox_core.cpp (ebox):              config->pll.clock = _CPU_XTAL_CLK_HZ * (j + 24) / (i + 1)  ;
+Ebox_core.cpp (ebox):              if(config->pll.clock == MAX_PLL_CLOCK)//达到最高PLL限定值，优先分配相等的配置
+Ebox_core.cpp (ebox):              else if(config->pll.clock > MAX_PLL_CLOCK)//取其上一个最接近的PLL限定值；
+Ebox_core.cpp (ebox):          config->pll.clock = _CPU_XTAL_CLK_HZ * (config->pll.vdiv + 24) / (config->pll.prdiv + 1) ;
+Ebox_core.cpp (ebox):          config->pll.clock = _CPU_XTAL_CLK_HZ * (config->pll.vdiv + 24) / (config->pll.prdiv + 1) ;
+Ebox_core.cpp (ebox):    __RAMFUNC void set_sys_dividers(uint32_t outdiv1, uint32_t outdiv2, uint32_t outdiv3, uint32_t outdiv4)
+Ebox_core.cpp (ebox):        * This routine must be placed in RAM. It is a workaround for errata e2448.
+Ebox_core.cpp (ebox):        temp_reg = FMC_PFAPR; // store present value of FMC_PFAPR
+Ebox_core.cpp (ebox):        FMC_PFAPR |= FMC_PFAPR_M7PFD_MASK | FMC_PFAPR_M6PFD_MASK | FMC_PFAPR_M5PFD_MASK
+Ebox_core.cpp (ebox):                     | FMC_PFAPR_M4PFD_MASK | FMC_PFAPR_M3PFD_MASK | FMC_PFAPR_M2PFD_MASK
+Ebox_core.cpp (ebox):                     | FMC_PFAPR_M1PFD_MASK | FMC_PFAPR_M0PFD_MASK;
+Ebox_core.cpp (ebox):        FMC_PFAPR = temp_reg; // re-store original value of FMC_PFAPR
+Ebox_core.cpp (ebox):        MCG_C2 &= ~MCG_C2_LP_MASK;
+Ebox_core.cpp (ebox):        MCG_C2 |= MCG_C2_RANGE(1);
+Ebox_core.cpp (ebox):        while (MCG_S & MCG_S_IREFST_MASK) {};                       //等待FLL参考时钟 为 外部参考时钟（S[IREFST]=0，表示使用外部参考时钟，）
+Ebox_core.cpp (ebox):        while (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) != 0x2) {}; //等待选择外部参考时钟
+Ebox_core.cpp (ebox):        MCG_C5 = MCG_C5_PRDIV0(system_clock_config.pll.prdiv);                      //分频， EXTAL_IN_MHz/( PRDIV+1)
+Ebox_core.cpp (ebox):        MCG_C6 = MCG_C6_PLLS_MASK | MCG_C6_VDIV0(system_clock_config.pll.vdiv) ;    //倍频， EXTAL_IN_MHz/( PRDIV+1)  * (VDIV+24)
+Ebox_core.cpp (ebox):        while (!(MCG_S & MCG_S_PLLST_MASK)) {};                         //等待时钟源选择PLL
+Ebox_core.cpp (ebox):        while (!(MCG_S & MCG_S_LOCK0_MASK)) {};                          //等待 PLL锁了（锁相环）
+Ebox_core.cpp (ebox):        MCG_C1 &= ~MCG_C1_CLKS_MASK;
+Ebox_core.cpp (ebox):        while (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) != 0x3) {};//等待选择输出PLL
+Ebox_core.cpp (ebox):        val = SysTick->VAL;
+Ebox_gpio.h (ebox):    AIN             ,
+Ebox_gpio.h (ebox):    AF_OD           ,
+Ebox_gpio.h (ebox):    AF_OD_PU        ,   
+Ebox_gpio.h (ebox):    AF_OD_PD        ,
+Ebox_gpio.h (ebox):    AF_PP           ,      
+Ebox_gpio.h (ebox):    AF_PP_PU        ,
+Ebox_gpio.h (ebox):    AF_PP_PD        ,
+Ebox_gpio.h (ebox):    PA0_ID = 0,     PA1_ID,     PA2_ID,     PA3_ID,     PA4_ID,     PA5_ID,     PA6_ID,     PA7_ID,
+Ebox_gpio.h (ebox):    PA8_ID,         PA9_ID,     PA10_ID,    PA11_ID,    PA12_ID,    PA13_ID,    PA14_ID,    PA15_ID,   
+Ebox_gpio.h (ebox):    PA16_ID,         PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_gpio.h (ebox):    PA16_ID,        PA17_ID,    PA18_ID,    PA19_ID,    PA20_ID,    PA21_ID,    PA22_ID,    PA23_ID,
+Ebox_gpio.h (ebox):    PA24_ID,        PA25_ID,    PA26_ID,    PA27_ID,    PA28_ID,    PA29_ID,    PA30_ID,    PA31_ID,
+Ebox_object.cpp (ebox):Gpio pa6(GPIOA,PORTA,6);
+Ebox_object.cpp (ebox):Gpio PA0(GPIOA, PORTA,0);
+Ebox_object.cpp (ebox):Gpio PA1(GPIOA, PORTA,1);
+Ebox_object.cpp (ebox):Gpio PA2(GPIOA, PORTA,2);
+Ebox_object.cpp (ebox):Gpio PA3(GPIOA, PORTA,3);
+Ebox_object.cpp (ebox):Gpio PA4(GPIOA, PORTA,4);
+Ebox_object.cpp (ebox):Gpio PA5(GPIOA, PORTA,5);
+Ebox_object.cpp (ebox):Gpio PA6(GPIOA, PORTA,6);
+Ebox_object.cpp (ebox):Gpio PA7(GPIOA, PORTA,7);
+Ebox_object.cpp (ebox):Gpio PA8(GPIOA, PORTA,8);
+Ebox_object.cpp (ebox):Gpio PA9(GPIOA, PORTA,9);
+Ebox_object.cpp (ebox):Gpio PA10(GPIOA, PORTA,10);
+Ebox_object.cpp (ebox):Gpio PA11(GPIOA, PORTA,11);
+Ebox_object.cpp (ebox):Gpio PA12(GPIOA, PORTA,12);
+Ebox_object.cpp (ebox):Gpio PA13(GPIOA, PORTA,13);
+Ebox_object.cpp (ebox):Gpio PA14(GPIOA, PORTA,14);
+Ebox_object.cpp (ebox):Gpio PA15(GPIOA, PORTA,15);
+Ebox_object.cpp (ebox):Gpio PA16(GPIOA, PORTA,16);
+Ebox_object.cpp (ebox):Gpio PA17(GPIOA, PORTA,17);
+Ebox_object.cpp (ebox):Gpio PA18(GPIOA, PORTA,18);
+Ebox_object.cpp (ebox):Gpio PA19(GPIOA, PORTA,19);
+Ebox_object.cpp (ebox):Gpio PA20(GPIOA, PORTA,20);
+Ebox_object.cpp (ebox):Gpio PA21(GPIOA, PORTA,21);
+Ebox_object.cpp (ebox):Gpio PA22(GPIOA, PORTA,22);
+Ebox_object.cpp (ebox):Gpio PA23(GPIOA, PORTA,23);
+Ebox_object.cpp (ebox):Gpio PA24(GPIOA, PORTA,24);
+Ebox_object.cpp (ebox):Gpio PA25(GPIOA, PORTA,25);
+Ebox_object.cpp (ebox):Gpio PA26(GPIOA, PORTA,26);
+Ebox_object.cpp (ebox):Gpio PA27(GPIOA, PORTA,27);
+Ebox_object.cpp (ebox):Gpio PA28(GPIOA, PORTA,28);
+Ebox_object.cpp (ebox):Gpio PA29(GPIOA, PORTA,29);
+Ebox_object.cpp (ebox):Gpio PA30(GPIOA, PORTA,30);
+Ebox_object.cpp (ebox):Gpio PA31(GPIOA, PORTA,31);
+Ebox_object.cpp (ebox):Uart uart0(UART0,&PA2,&PA0);
+Ebox_object.cpp (ebox)://Uart uart0(UART0,&PC4,&PC5);
+Ebox_object.cpp (ebox)://Uart uart0(UART0,&PC4,&PC5);
+Ebox_object.cpp (ebox):Uart uart1(UART1,&PE0,&PE1);
+Ebox_object.cpp (ebox)://Uart uart1(UART1,&PC4,&PC5);
+Ebox_port.h (ebox):#define     PORT_PIN_DISABLED   0U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
+Ebox_port.h (ebox):#define     PORT_MUX_AS_GPIO    1U   /*!< corresponding pin is disabled, but is used as an analog pin.*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT2     2U   /*!< chip-specific*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT3     3U   /*!< chip-specific*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT4     4U   /*!< chip-specific*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT5     5U   /*!< chip-specific*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT6     6U   /*!< chip-specific*/
+Ebox_port.h (ebox):#define     PORT_MUX_ALT7     7U    /*!< chip-specific*/
+Ebox_sim.h (ebox):#define sim_enable_uart4_clock()    SIM_BWR_SCGC1_UART4(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_uart5_clock()    SIM_BWR_SCGC1_UART5(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_dac0_clock()    SIM_BWR_SCGC2_DAC0(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_dac1_clock()    SIM_BWR_SCGC2_DAC1(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_rnga_clock()         SIM_BWR_SCGC3_RNGA(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_flexcan1_clock()     SIM_BWR_SCGC3_FLEXCAN1(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_sai1_clock()         SIM_BWR_SCGC3_SAI1(SIM,1);//
+Ebox_sim.h (ebox):#define sim_enable_adc1_clock()         SIM_BWR_SCGC3_ADC1(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_adc3_clock()         SIM_BWR_SCGC3_ADC3(SIM,1);//
+Ebox_sim.h (ebox):#define sim_enable_uart0_clock()        SIM_BWR_SCGC4_UART0(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_uart1_clock()        SIM_BWR_SCGC4_UART1(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_uart2_clock()        SIM_BWR_SCGC4_UART2(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_uart3_clock()        SIM_BWR_SCGC4_UART3(SIM,1);
+Ebox_sim.h (ebox):#define sim_enable_porta_clock()        SIM_BWR_SCGC5_PORTA(SIM,1);
+Ebox_uart.cpp (ebox):Uart::Uart(UART_Type *uart,Port *tx,Port *rx)
+Ebox_uart.cpp (ebox):    case (uint32_t)UART0:
+Ebox_uart.cpp (ebox):        if(rx == &PA1)
+Ebox_uart.cpp (ebox):            rx->set_mux(PORT_MUX_ALT2);
+Ebox_uart.cpp (ebox):        else if(rx == &PA15 || rx == &PB16 || rx == &PD6)
+Ebox_uart.cpp (ebox):            rx->set_mux(PORT_MUX_ALT3);
+Ebox_uart.cpp (ebox):        if(tx == &PA2)
+Ebox_uart.cpp (ebox):            tx->set_mux(PORT_MUX_ALT2);
+Ebox_uart.cpp (ebox):        else if(tx == &PA14 || tx == &PB17 || tx == &PD7)
+Ebox_uart.cpp (ebox):            tx->set_mux(PORT_MUX_ALT3);
+Ebox_uart.cpp (ebox):    case (uint32_t)UART1:
+Ebox_uart.cpp (ebox):          rx->set_mux(PORT_MUX_ALT3); 
+Ebox_uart.cpp (ebox):          tx->set_mux(PORT_MUX_ALT3);
+Ebox_uart.h (ebox):#ifndef __EBOX_UART_H
+Ebox_uart.h (ebox):#define __EBOX_UART_H
+Ebox_uart.h (ebox):    Uart(UART_Type *uart,Port *tx,Port *rx);
+Ebox_uart.h (ebox):    UART_Type *uart;
